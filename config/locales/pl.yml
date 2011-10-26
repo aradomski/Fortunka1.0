@@ -1,0 +1,6 @@
+pl:
+  views:
+    pagination:
+      previous: "&#x21d0;"
+      next: "&#x21d2;"
+      truncate: ""
