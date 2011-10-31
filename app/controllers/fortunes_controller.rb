@@ -3,7 +3,7 @@ class FortunesController < ApplicationController
    # @fortunes = Fortune.all
   #end
 def index   
-  @fortunes = Fortune.order(:author).page(params[:page]).per(8)
+  @fortunes = Fortune.order(:author).page(params[:page]).per(3)
 #    respond_with(@fortunes) 
 end  
 

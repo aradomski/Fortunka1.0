@@ -1,16 +1,17 @@
-<% title "Fortune" %>
+<div class="holder_content1">
+   
+   <section class="group4">
+   <h1> <%= @fortune.author %></h1>
+   <img src="images/icon3.png" width="51" height="52" alt="icons" class="icons"/>
 
-<p>
-  <strong>Author:</strong>
-  <%= @fortune.author %>
-</p>
-<p>
-  <strong>Body:</strong>
-  <%= @fortune.body %>
-</p>
+   <article>
+   <p class="fortune">  <%= @fortune.body %></p>
+   
+    <span class='button1'><%=link_to "View All", fortunes_path  %></span>
+  <span class='button2'><%= link_to "Edit", edit_fortune_path(@fortune) %></span>
+ <span class='button3'><%=link_to "Destroy", @fortune, :confirm => 'Are you sure?', :method => :delete %></span>
+   </article> 
+   
+   </section>
 
-<p>
-  <%= link_to "Edit", edit_fortune_path(@fortune) %> |
-  <%= link_to "Destroy", @fortune, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", fortunes_path %>
-</p>
+   </div>

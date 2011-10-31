@@ -1,20 +1,42 @@
+ <!--start holder-->
+   <div class="holder_content1">
+   
+   <section class="group4">
+   <h1>Latest news</h1>
+   <img src="images/icon3.png" width="51" height="52" alt="icons" class="icons"/>
+
+   <article>
+   <h2>10.08.2011  -  Internet marketing</h2>
+
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. 
+   Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.   </p>
+
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. 
+   Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero. 
+   </p>
+   </article> 
+   
+   </section>
+
+   </div>
+   <!--end holder-->
+
 <!--start holder-->
 <div class="holder_content">
-<% title "Fortunes" %>
+
 <%  @i = 1 %>
 <% for fortune in @fortunes %>
 
 <section class="group<%=@i%>">
 <h1> <%= fortune.author %></h1>
- <div> <%= fortune.body %></div>
- <span class='button'><%= link_to "Show", fortune  %></span>
-  <span class='button'><%= link_to "Edit", edit_fortune_path(fortune) %></span>
- <span class='button'><%= link_to "Destroy", fortune, :confirm => 'Are you sure?', :method => :delete %></span>
+ <div class="fortune"> <%= fortune.body %></div>
+ <span class='button1'><%= link_to "Show", fortune %></span>
+  <span class='button2'><%= link_to "Edit", edit_fortune_path(fortune) %></span>
+ <span class='button3'><%= link_to "Destroy", fortune, :confirm => 'Are you sure?', :method => :delete %></span>
    </section>
 	<%@i = @i+1%>
 	<% if @i==4
 		@i=1
-	break
 	  end %>
 <% end %>
  </div>

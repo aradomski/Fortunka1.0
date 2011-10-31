@@ -1,12 +1,14 @@
 <%= form_for @fortune do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :author %><br />
+	<div class="form1">
+  <h2>  <%= f.label :author %><br /></h2>
     <%= f.text_field :author %>
-  </p>
-  <p>
-    <%= f.label :body %><br />
+     <p class="submit"><%= f.submit %></p>
+  <span class='button1'> <%= link_to "Show", @fortune %> </span>
+  <span class='button2'> <%= link_to "View All", fortunes_path %> </span>
+    </div>
+	<div class="form2">
+   <h2> <%= f.label :body %><br /></h2>
     <%= f.text_area :body %>
-  </p>
-  <p><%= f.submit %></p>
+    </div>
 <% end %>

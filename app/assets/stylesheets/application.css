@@ -219,10 +219,6 @@ h3 span{
 	border:3px double #CDCDCD;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-
-
-
-
 	}
 	
 	
@@ -236,6 +232,25 @@ header{
 
 
 	}
+	
+	
+div.fortune{
+	height:5em;
+}
+p.fortune{
+	height:5em;
+}
+
+div.form1{
+display: block;
+	float:left;
+}
+div.form2{
+	margin-left:2em;
+	display: block;
+	float:left;
+}
+
 	
 	
 /***************************************************
@@ -446,6 +461,11 @@ nav ul li a:hover{
 }
 
 
+p.submit{
+margin-top:2em;
+}
+
+
 
 
 /***************************************************
@@ -472,8 +492,7 @@ nav ul li a:hover{
 }
 
  
- 	
-.button {
+ .button {
 	width: 80px;
 	height:16px;
 	position:relative;
@@ -492,6 +511,76 @@ nav ul li a:hover{
 	}
 	
 .button:hover {
+	background-color:#ED7803;
+	text-decoration:none;
+}
+ 	
+.button1 {
+	width: 60px;
+	height:16px;
+	position:relative;
+	margin-top:12px;
+	margin-right:2px;
+	padding:9px;
+	background-color:#FC8507;
+	display: inline-block;
+	color:white;
+	cursor: pointer;
+	text-align: center;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	float:left;
+	text-decoration:none;
+	}
+	
+.button1:hover {
+	background-color:#ED7803;
+	text-decoration:none;
+}
+
+.button2 {
+	width: 60px;
+	height:16px;
+	position:relative;
+	margin-top:12px;
+	margin-right:2px;
+	padding:9px;
+	background-color:#FC8507;
+	display: inline-block;
+	color:white;
+	cursor: pointer;
+	text-align: center;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	float:left;
+	text-decoration:none;
+	}
+	
+.button2:hover {
+	background-color:#ED7803;
+	text-decoration:none;
+}
+.button3 {
+	width: 60px;
+	height:16px;
+	position:relative;
+	margin-top:12px;
+	padding:9px;
+	background-color:#FC8507;
+	display: inline-block;
+	color:white;
+	cursor: pointer;
+	text-align: center;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	float:left;
+	text-decoration:none;
+	}
+	
+.button3:hover {
 	background-color:#ED7803;
 	text-decoration:none;
 }
@@ -612,19 +701,19 @@ nav ul li a:hover{
 nav.pagination { 
 	display: block;
 	height: 2em;
-	left: 100px;
+	left: 30px;
 	margin-bottom: 2em;
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-top: 2em;
-	top: 940px;
-	width: 300px;
+	top: 900px;
+	width: 510px;
  }
 nav.pagination a, nav.pagination .page.current {
   padding: 4px;
   text-decoration: none;
   font-weight: bold;
-  color:green;
+  color:#FC8507;
    /* width: 80px;
 	height:16px;
 	position:relative;
