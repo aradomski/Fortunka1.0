@@ -1,11 +1,7 @@
 <!doctype html>  
 <head>
 <meta charset="UTF-8">
-<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-    <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag :defaults %>
-    <%= csrf_meta_tag %>
-    <%= yield(:head) %>
+<title>OnlineSolutions - Home</title>
 <link rel="icon" href="images/favicon.gif" type="image/x-icon"/>
  <!--[if lt IE 9]>
  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -100,14 +96,42 @@
 
    </div>
    <!--end holder-->
+
    
-   <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-      <%= content_tag :h1, yield(:title) if show_title? %>
-      <%= yield %>
-       <%= javascript_include_tag "rails", "application" %>
-  
+   <!--start holder-->
+
+   <div class="holder_content">
+
+   <section class="group1">
+   <h1> 1. Creative solutions</h1>
+   <img src="images/icon4.png" width="51" height="52" alt="icons" class="icons"/>
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. 
+   Vestibulum condimentum  facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.</p>
+   <a href=""><span class="button">Read more</span></a>
+   </section>
+
+   
+   <section class="group2">
+   <h1>2. Consulting</h1>
+   <img src="images/icon2.png" width="51" height="52" alt="icons" class="icons"/>
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. 
+   Vestibulum condimentum  facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.</p>
+   <a href=""><span class="button">Read more</span></a>
+   </section>
+   
+   <section class="group3">
+   <h1>3. Development</h1>
+   <img src="images/icon1.png" width="51" height="52" alt="icons" class="icons"/>
+   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. 
+   Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.   </p>
+   <a href=""><span class="button">Read more</span></a>
+    
+   </section>
+
+ 
+   </div>
+   <!--end holder-->
+   
    
    </div>
    <!--end container-->

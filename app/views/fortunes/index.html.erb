@@ -1,20 +1,25 @@
+<!--start holder-->
+<div class="holder_content">
 <% title "Fortunes" %>
-<table>
-  <tr>
-    <th>Author</th>
-    <th>Body</th>
-  </tr>
-  <% for fortune in @fortunes %>
-    <tr>
-      <td><%= fortune.author %></td>
-      <td><%= fortune.body %></td>
-      <td><%= link_to "Show", fortune %></td>
-      <td><%= link_to "Edit", edit_fortune_path(fortune) %></td>
-      <td><%= link_to "Destroy", fortune, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
+<%  @i = 1 %>
+<% for fortune in @fortunes %>
 
+<section class="group<%=@i%>">
+<h1> <%= fortune.author %></h1>
+ <div> <%= fortune.body %></div>
+ <span class='button'><%= link_to "Show", fortune  %></span>
+  <span class='button'><%= link_to "Edit", edit_fortune_path(fortune) %></span>
+ <span class='button'><%= link_to "Destroy", fortune, :confirm => 'Are you sure?', :method => :delete %></span>
+   </section>
+	<%@i = @i+1%>
+	<% if @i==4
+		@i=1
+	break
+	  end %>
+<% end %>
+ </div>
+   <!--end holder-->
+   <div>
+ <%= paginate @fortunes %>
+   </div>
 
-<p><%= link_to "New Fortune", new_fortune_path %></p>  
-<%= paginate @fortunes %>
