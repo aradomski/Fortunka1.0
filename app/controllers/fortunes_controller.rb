@@ -42,4 +42,8 @@ end
     @fortune.destroy
     redirect_to fortunes_url, :notice => "Successfully destroyed fortune."
   end
+  #def index #SEARCH
+  #@fortunes = Fortune.search(params[:search]).order(:author).page(params[:page]).per(3)
+ # respond_with(@fortunes)
+ # end
 end

@@ -5,3 +5,10 @@ class Fortune < ActiveRecord::Base
  validates_uniqueness_of :body, :case_sensitive => false 
 validates_length_of :author, :in => 4..64, :allow_blank => true
  end
+def self.search(search)
+  if search
+    where('body LIKE ?', "%#{search}%")
+  else
+    scoped
+  end
+end

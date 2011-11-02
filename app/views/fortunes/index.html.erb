@@ -2,18 +2,13 @@
    <div class="holder_content1">
    
    <section class="group4">
-   <h1>Latest news</h1>
-   <img src="images/icon3.png" width="51" height="52" alt="icons" class="icons"/>
-
-   <article>
-   <h2>10.08.2011  -  Internet marketing</h2>
-
-   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. 
-   Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero.   </p>
-
-   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec molestie. Sed aliquam sem ut arcu. Phasellus sollicitudin. 
-   Vestibulum condimentum facilisis nulla. In hac habitasse platea dictumst. Nulla nonummy. Cras quis libero. 
-   </p>
+	   <h2>Wyszukaj fortunke:</h2>
+   <%= form_tag fortunes_path, :method => :get, :id => "fortunes_search" do %>
+	
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Szukaj", :name => nil %>
+	
+	<% end %>
    </article> 
    
    </section>
