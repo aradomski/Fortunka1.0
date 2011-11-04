@@ -1,0 +1,7 @@
+<section class="group1">
+<h1> <%= fortune.author %></h1>
+ <div class="fortune"> <%= fortune.body %></div>
+ <span class='button1'><%= link_to "Show", fortune %></span>
+  <span class='button2'><%= link_to "Edit", edit_fortune_path(fortune) %></span>
+ <span class='button3'><%= link_to "Destroy", fortune, :confirm => 'Are you sure?', :method => :delete %></span>
+</section>
