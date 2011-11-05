@@ -1,0 +1,7 @@
+<div class='form1'>
+<%= simple_form_for [@fortune, @comment] do |f| %>
+  <%= f.input :author, :input_html => {:size => 20} %><br/>
+  <div class="addBodyCmt"><%= f.input :body, :input_html => {:size=>50} %></div><br/>
+  <%= f.button :submit %>
+<% end %>
+</div>

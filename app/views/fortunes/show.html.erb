@@ -10,8 +10,19 @@
     <span class='button1'><%=link_to "View All", fortunes_path  %></span>
   <span class='button2'><%= link_to "Edit", edit_fortune_path(@fortune) %></span>
  <span class='button3'><%=link_to "Destroy", @fortune, :confirm => 'Are you sure?', :method => :delete %></span>
-   </article> 
-   
-   </section>
+<div>&nbsp;<br />&nbsp;<br />&nbsp;</div>
+ </article> 
+ 
+ <div>
+ <h2>Add new comment</h2>
+<%= render :partial => 'comments/form' %>
+ </div><div>&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;</div>
+ <div>
+  <% if @fortune.comments.any? %>
+  <h2>Comments</h2>
+  <%= render :partial => 'comments/comment', :collection => @fortune.comments %>
+<% end %>
+</div>
 
+     </section>
    </div>

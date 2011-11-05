@@ -1,5 +1,12 @@
 Fortunka::Application.routes.draw do
-  resources :fortunes
+resources :fortunes do
+		resources :comments
+	end
+
+
+ # resources :comments
+
+ # resources :fortunes
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

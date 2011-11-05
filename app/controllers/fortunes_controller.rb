@@ -10,11 +10,15 @@ class FortunesController < ApplicationController
     @fortunes = Fortune.search(params[:search]).order(:author).page(params[:page]).per(3)
     respond_with(@fortunes)
   end
-  def show
-    @fortune = Fortune.find(params[:id])
-    respond_with(@fortune)
-  end
-
+ # def show
+  #  @fortune = Fortune.find(params[:id])
+  #  respond_with(@fortune)
+  #end
+def show
+  @fortune = Fortune.find(params[:id])
+  @comment = Comment.new
+  respond_with(@fortune)
+end
   def new
     @fortune = Fortune.new
   end
