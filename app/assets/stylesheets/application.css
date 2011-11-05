@@ -540,6 +540,25 @@ margin-top:2em;
 	text-decoration:none;
 }
 
+.miniButton{
+width: 35px;
+	height:10px;
+	position:relative;
+	margin-top:2px;
+	margin-right:2px;
+	padding:7px;
+	background-color:#FC8507;
+	display: inline-block;
+	color:white;
+	cursor: pointer;
+	text-align: center;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+	text-decoration:none;
+}
+
 .button2 {
 	width: 60px;
 	height:16px;
