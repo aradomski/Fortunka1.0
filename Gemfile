@@ -9,6 +9,7 @@ gem 'responders'
 gem 'simple_form'
 gem 'mocha'
 gem "kaminari"  
+gem 'devise'   
 
 group :development do
   gem 'heroku'
