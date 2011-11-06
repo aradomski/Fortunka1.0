@@ -1,3 +1,6 @@
+<div class="holder_content1">
+   
+   <section class="group4">
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
@@ -9,7 +12,7 @@
     <%= f.input :password_confirmation, :required => false %>
     <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true %>
   </div>
-
+<%= render :partial => "devise/shared/roles", :locals => {:f => f} %>
   <div class="actions">
     <%= f.button :submit, "Update" %>
   </div>
@@ -20,3 +23,8 @@
 <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete %>.</p>
 
 <%= link_to "Back", :back %>
+</section>
+
+   </div>
+<div class="holder_content">
+</div>

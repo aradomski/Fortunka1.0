@@ -15,4 +15,22 @@ platitudes.map do |p|
   else
     Fortune.create :body => p[0..-4], :author => Faker::Name.name
   end
+  
+  User.create :email => 'admin@a.pl',
+  :password=> '123456', :password_confirmation => '123456',
+  :roles => [:admin]
+User.create :email => 'mod@a.pl',
+  :password=> '123456', :password_confirmation => '123456',
+  :roles => [:moderator]
+User.create :email => 'aut@a.pl',
+  :password=> '123456', :password_confirmation => '123456',
+  :roles => [:author]
+User.create :email => 'ban@a.pl',
+  :password=> '123456', :password_confirmation => '123456',
+  :roles => [:banned]
+
+user_count = User.count
+
+  
+  
 end

@@ -1,0 +1,5 @@
+<p><%= f.label :roles %><br>
+<% for role in User.valid_roles %>
+  <%= check_box_tag "user[roles][]", role, @user.roles.include?(role) %>
+  <%= role.to_s.humanize %>
+<% end %></p>

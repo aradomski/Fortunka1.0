@@ -8,14 +8,22 @@
    <p class="fortune">  <%= @fortune.body %></p>
    
     <span class='button1'><%=link_to "View All", fortunes_path  %></span>
+ 
+ <% if can? :update, @fortune %>
   <span class='button2'><%= link_to "Edit", edit_fortune_path(@fortune) %></span>
- <span class='button3'><%=link_to "Destroy", @fortune, :confirm => 'Are you sure?', :method => :delete %></span>
+  <% end %>
+  <% if can? :destroy, @fortune %>
+ <span class='button3'><%= link_to "Destroy", @fortune, :confirm => 'Are you sure?', :method => :delete %></span>
+   <% end %>
+ 
 <div>&nbsp;<br />&nbsp;<br />&nbsp;</div>
  </article> 
  
  <div>
+ <% if can? :create, Comment %>
  <h2>Add new comment</h2>
 <%= render :partial => 'comments/form' %>
+<% end %>
  </div><div>&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;</div>
  <div>
   <% if @fortune.comments.any? %>

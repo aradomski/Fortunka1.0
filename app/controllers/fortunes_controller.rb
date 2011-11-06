@@ -1,4 +1,5 @@
 class FortunesController < ApplicationController
+  load_and_authorize_resource
   #def index
    # @fortunes = Fortune.all
   #end
@@ -23,11 +24,18 @@ end
     @fortune = Fortune.new
   end
 
-  def create
-  @fortune = Fortune.new(params[:fortune])
+  #def create
+  #@fortune = Fortune.new(params[:fortune])
+  #@fortune.save
+  #respond_with(@fortune)
+#end
+def create
+  # klasyczne scoping out
+  @fortune = current_user.fortunes.build(params[:fortune])
   @fortune.save
   respond_with(@fortune)
 end
+
 def update
   @fortune = Fortune.find(params[:id])
   @fortune.update_attributes(params[:fortune])

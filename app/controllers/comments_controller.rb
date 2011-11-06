@@ -1,13 +1,22 @@
 class CommentsController < ApplicationController
+load_and_authorize_resource
   before_filter do
     @fortune = Fortune.find(params[:fortune_id])
   end
 
-  def create
-    @comment = @fortune.comments.build(params[:comment])
-    @comment.save
-    respond_with(@fortune, @comment, :location => @fortune)
-  end
+  #def create
+  #  @comment = @fortune.comments.build(params[:comment])
+  #  @comment.save
+  #  respond_with(@fortune, @comment, :location => @fortune)
+  #end
+
+def create
+  # scoping out
+  params[:comment][:user_id] = current_user.id
+  @comment = @fortune.comments.build(params[:comment])
+  @comment.save
+  respond_with(@fortune, @comment, :location => @fortune)
+end
 
   def destroy
     @comment = @fortune.comments.find(params[:id])

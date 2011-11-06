@@ -8,6 +8,9 @@ has_many :comments, :dependent => :destroy
  validates_uniqueness_of :body, :case_sensitive => false 
 validates_length_of :author, :in => 4..64, :allow_blank => true
  
+   belongs_to :user
+  has_many :comments, :dependent => :destroy
+
 
 
 def self.search(search)

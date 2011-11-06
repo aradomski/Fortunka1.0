@@ -1,10 +1,16 @@
 <div class="comment">
-<p><b>Autor:</b> <%= comment.author %></p>
+<p><b>Autor:</b> <%= comment.author %> : <em><%= comment.user.email %></em></p>
 <div><b>Body:</b>
   <%= comment.body %>
+ 
+</p>
 </div>
-<span class="miniButton">
-  <%= link_to "Delete", [@fortune, comment], :confirm => 'Are you sure?', :method => :delete %></span><span class="miniButton">
-  <%= link_to 'Edit', edit_fortune_comment_path(@fortune, comment) %>
-</span>
+
+<% if can? :destroy, comment %>
+<span class="miniButton">  <%= link_to "Delete", [@fortune, comment], :confirm => 'Are you sure?', :method => :delete %></span>
+  <% end %>  
+  <% if can? :edit, comment %>
+ <span class="miniButton"> <%= link_to 'Edit', edit_fortune_comment_path(@fortune, comment) %></span>
+  <% end %> 
+
 </div>

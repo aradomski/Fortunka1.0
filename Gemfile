@@ -10,7 +10,8 @@ gem 'simple_form'
 gem 'mocha'
 gem "kaminari"  
 gem 'devise'
-
+gem "cancan"
+gem 'role_model'
 
 group :development do
   gem 'heroku'
