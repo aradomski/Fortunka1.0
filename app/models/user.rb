@@ -17,7 +17,7 @@ include RoleModel
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-has_many :posts, :dependent => :destroy
+has_many :fortunes, :dependent => :destroy
   has_many :comments, :dependent => :destroy
 
   # Setup accessible (or protected) attributes for your model
