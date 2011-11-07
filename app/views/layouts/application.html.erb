@@ -1,5 +1,6 @@
 <!doctype html>  
 <head>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 <%= auto_discovery_link_tag(:atom, fortunes_path(:atom)) %>
 <meta charset="UTF-8">
 <title><%= content_for?(:title) ? yield(:title) : "Fortunes" %></title>

@@ -2,8 +2,10 @@
    
    <section class="group4">
    <h1> <%= @fortune.author %></h1>
-   <img src="images/icon3.png" width="51" height="52" alt="icons" class="icons"/>
-
+   <div class="icons">
+   <%= image_tag("icon3.png", :width=>"51", :height=>"52", :alt=>"icons") %>
+   <!-- img src="images/icon3.png" width="51" height="52" alt="icons" class="icons"/-->
+	</div>
    <article>
    <p class="fortune">  <%= @fortune.body %></p>
    
@@ -31,9 +33,11 @@
   <%= render :partial => 'comments/comment', :collection => @fortune.comments %>
 <% end %>
 </div>
-
-<iframe src="http://www.facebook.com/plugins/like.php?href="<%=request.url%>"&layout=standard&show_faces=true& width=450&action=like&colorscheme=light&height=80"scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe>
-	 
-
+<br />
+<div>
+<iframe src="http://www.facebook.com/plugins/like.php?href="<%=request.url%>"&layout=standard&show_faces=true& width=200&action=like&colorscheme=light&height=80"scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe>
+<br />
+<g:plusone size="medium"></g:plusone>
+</div>
      </section>
    </div>
