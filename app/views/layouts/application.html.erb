@@ -40,7 +40,10 @@
     <header>
  
     <!--start logo-->
-    <a href="#" id="logo"><img src="images/logo.png" width="221" height="130" alt="logo"/></a>    
+    <a href="/" id="logo">
+    <%= image_tag("logo.png", :width=>"221", :height=>"130", :alt=>"logo") %>
+    <!--img src="images/logo.png" width="221" height="130" alt="logo"/ -->
+    </a>    
 
 	<!--end logo-->
 	
@@ -82,10 +85,10 @@
    <section id="intro">
    <div id="slides">
    <div class="slides_container">
-   <img src="images/banner1.png" width="960" height="300" alt="baner">
-   <img src="images/banner1.png" width="960" height="300" alt="baner">
-   <img src="images/banner1.png" width="960" height="300" alt="baner">
-
+   <%= image_tag("ban2.png", :width=>"960", :height=>"300", :alt=>"baner") %>
+   <%= image_tag("ban3.png", :width=>"960", :height=>"300", :alt=>"banner") %>
+   <%= image_tag("ban1.png", :width=>"960", :height=>"300", :alt=>"banner") %>
+   <!-- img src="images/banner1.png" width="960" height="300" alt="baner" TO RAZY 3 -->
    </div>
    </div>
  
@@ -127,8 +130,9 @@
    <span>Lorem ipsum dolor sit amet</span>
    </h3>
    </aside> 
-  <!--%=image_tag("images/contact-us.png", :alt=>"contact", :class=>"picture_footer")% -->
-   <img src="images/contact-us.png" width="240" height="230" alt="contact" class="picture_footer"/>
+   
+  <%=image_tag("contact-us.png", :alt=>"contact", :class=>"picture_footer", :width=>"240", :height=>"240")%>
+   <!--img src="images/contact-us.png" width="240" height="230" alt="contact" class="picture_footer"/ -->
     
    <div id="FooterTwo"> © 2011 Online solutions </div>
    <div id="FooterTree"> Valid html5 / design and code by <a href="http://www.marijazaric.com">marija zaric - creative simplicity</a> </div> 
