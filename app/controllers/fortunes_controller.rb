@@ -50,4 +50,10 @@ end
     @fortune.destroy
     redirect_to fortunes_url, :notice => "Successfully destroyed fortune."
   end
+def randomFortune
+    @fortune = Fortune.random
+    @comment = Comment.new
+    render :action => 'show'
+  end  
+  
 end

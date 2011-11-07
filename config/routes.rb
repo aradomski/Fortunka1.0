@@ -1,6 +1,6 @@
 Fortunka::Application.routes.draw do
   devise_for :users
-
+ get "random" => "fortunes#randomFortune",    :as => "random"
 resources :fortunes do
 		resources :comments
 	end
