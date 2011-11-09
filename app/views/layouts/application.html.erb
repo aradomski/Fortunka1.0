@@ -55,22 +55,22 @@
     <% if can? :create, Fortune %>
   <li><%= link_to 'New Fortune', new_fortune_path %></li>
 	<% end %>
-	<li><%= link_to "Losuj!", random_path %></li>
+	<li><%= link_to "Random", random_path %></li>
     <!--li><a href="#">News</a></li -->
     <!-- li><a href="#">Contact</a></li -->
+    <% if user_signed_in? %>
+  <li>  <%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+		<% else %>
+   <li> <%= link_to "Register", new_user_registration_path %> </li>
+ <li>   <%= link_to "Login", new_user_session_path %></li>
+    <% end %>
+    
     </ul>
     </nav>
     </div>
     <br />
      <div id="authentication">
-	<% if user_signed_in? %>
-    Logged as <%= current_user.email %>. Not you?
-    
-    <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
-		<% else %>
-    <%= link_to "Register", new_user_registration_path %> or
-    <%= link_to "Login", new_user_session_path %>
-  <% end %>
+	Logged as <%= current_user.email %>
 </div>
    
 	<!--end menu-->
